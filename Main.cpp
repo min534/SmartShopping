@@ -18,14 +18,16 @@ int main() {
         double budget;
         cout << "예산을 입력하세요: ";
         cin >> budget;
-
+// 객체 생성
         SmartShopping shopping(budget);
-
+        
+// 파일 열어서 상품 정보 확인
         ifstream file("items.txt");
         if (!file) throw runtime_error("items.txt 파일을 열 수 없습니다.");
 
         string name;
         double price, discountRate;
+// 파일 데이터 읽어서 객체 생성 및 추가
         while (file >> name >> price >> discountRate) {
             if (discountRate > 0) {
                 shopping.addItem(new DiscountItem(name, price, discountRate));
