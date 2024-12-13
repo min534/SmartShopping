@@ -1,0 +1,4 @@
+Laptop 1000000 0.1
+Phone 800000 0.2
+Tablet 500000 0.15
+Headphones 100000 0
